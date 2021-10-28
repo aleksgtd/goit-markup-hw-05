@@ -157,6 +157,28 @@ img {
   letter-spacing: 0.02em;
 }
 
+.site-nav-item {
+  position: relative;
+}
+
+.current::after {
+  content: "";
+  width: 100%;
+  height: 4px;
+  border-radius: 2px;
+  background-color: var(--focus-color);
+  position: absolute;
+  bottom: -32px;
+  left: 0;
+
+  opacity: 0;
+}
+
+.current:hover::after,
+.current:focus::after {
+  opacity: 1;
+}
+
 .site-nav-link.current {
   color: var(--nav-item-focus-color);
   font-weight: 500;
@@ -407,6 +429,31 @@ img {
   line-height: 1.17;
   text-align: center;
   letter-spacing: 0.03em;
+}
+
+.activities-section-subtitle {
+  color: var(--main-title-color);
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+
+.activities-subtitle-box {
+  background-color: rgba(47, 48, 58, 0.8);
+  height: 70px;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.activities-img-thumb {
+  position: relative;
 }
 
 /*-team-section-*/
